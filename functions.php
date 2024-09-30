@@ -176,9 +176,6 @@ function override_default_shipping_address_fields( $fields ) {
 }
 
 
-
-
-
  /*
     ORDER AUTH
  */
@@ -202,6 +199,7 @@ function get_order_serial_number($data) {
     
     return rest_ensure_response(array(
         'order_id' => $order_id,
+        'order_customer' => 'customer name',
         'serial_number' => $serial_number,
     ));
 }
