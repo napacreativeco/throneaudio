@@ -1,0 +1,130 @@
+#header-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px var(--side-padding);
+    //position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+
+    .current-menu-item {
+        color: var(--orange);
+    }
+
+    svg {
+        width: 40px;
+        height: 100%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+
+        a {
+            font-family: var(--sans);
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        a:hover {
+            color: var(--orange);
+        }
+
+        a[href="#"] {
+            cursor: default;
+            pointer-events: none;
+            color: var(--grey);
+        }
+    }
+
+    ul.sub-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0px;
+        opacity: 0.6;
+        margin-top: 6px;
+    }
+
+    .header-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 40px;
+
+        svg {
+            path {
+                fill: var(--white);
+                transition: all var(--transition);
+            }
+        }
+
+        svg:hover {
+            path {
+                fill: var(--orange);
+            }
+        }
+
+    }
+
+    .header-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+
+        svg {
+            width: 24px;
+            height: 100%;
+            margin-top: 3px;
+
+            path {
+                transition: all var(--transition);
+            }
+            
+        }
+
+        svg:hover {
+            path {
+                fill: var(--orange);
+            }
+        }
+    }
+
+    .cart-count {
+        background: var(--orange);
+        border-radius: 14px 0 0 14px;
+        padding: 14px 40px 14px 20px;
+        margin: 0px calc(var(--side-padding) * -1) 0 0;
+        cursor: pointer;
+        transition: all var(--transition);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+
+        svg {
+            margin-top: 0px;
+            width: 22px;
+            height: 100%;
+        }
+    }
+
+    .cart-count:hover {
+        opacity: 0.8;
+        padding: 14px 46px 14px 20px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    #header-desktop {
+        display: none;
+    }
+}  

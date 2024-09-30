@@ -1,0 +1,99 @@
+@import './reset.scss';
+
+:root {
+    --grey-dark: #5a5a5a;
+    --grey: #959595;
+    --grey-lite: #cdcdcd;
+    --white: #F9F9F9;
+    --black: #171717;
+    --black-lite: #262626;
+    --orange: #EE5105;
+
+    --sans: "apfel";
+    --mono: "Martian Mono", monospace;
+
+    --side-padding: 40px;
+    --top-padding: 90px;
+    --max-width: 920px;
+    --admin-bar: 32px;
+
+    --text-xxxl: 62px;
+    --text-xxl: 52px;
+    --text-xl: 42px;
+    --text-l: 34px;
+    --text-m: 22px;
+    --text-s: 16px;
+    --text-xs: 12px;
+
+    --transition: 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --admin-bar: 46px;
+
+        --side-padding: 21px;
+    }
+}
+
+body {
+    font-family: var(--mono);
+    background: var(--black);
+    color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--sans);
+}
+
+h1 { font-size: 46px; }
+
+h2 { font-size: 42px; }
+
+h3 { font-size: 36px; }
+
+h4 { font-size: 32px; }
+
+h5 { font-size: 26px; }
+
+h6 { font-size: 20px; } 
+
+.site-container {
+    position: relative;
+}
+
+main {
+    min-height: 100svh;
+}
+  
+summary  {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Header */
+@import './header/header.scss';
+@import './header/header-mobile.scss';
+@import './header/mobile-menu.scss';
+
+@import './notices.scss';
+@import './footer.scss';
+@import './marquee.scss';
+
+/* Cart */
+@import './cart/cart-drawer.scss';
+@import './cart/form-cart.scss';
+@import './cart/totals-cart.scss';
+
+/* Checkout */
+@import './checkout/header-checkout.scss';
+@import './checkout/form-checkout.scss';
+@import './checkout/details-element.scss';
+@import './checkout/table-checkout.scss';
+@import './checkout/actions-checkout.scss';
+
+/* Account */
+@import './account/account.scss';

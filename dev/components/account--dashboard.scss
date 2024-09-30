@@ -1,0 +1,32 @@
+.dashboard {
+    .row {
+        display: grid;
+        grid-template-columns: 4fr 8fr;
+        grid-gap: 40px 20px;
+        align-items: flex-end;
+        margin: 0 0 20px 0;
+
+        h4 {
+            font-family: var(--sans);
+            line-height: 1;
+        }
+    }
+
+    .update-info {
+        margin: 40px 0 0 0;
+        display: block;
+
+        a {
+            background: var(--grey-lite);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: var(--sans);
+            display: inline-block;
+            transition: all var(--transition);
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+    }
+}

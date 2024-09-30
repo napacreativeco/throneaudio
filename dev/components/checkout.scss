@@ -1,0 +1,80 @@
+header, footer {
+    display: none !important;
+}
+
+.desktop { display: block; }
+.mobile { display: none; }
+
+.checkout-page {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 40px;
+    padding: 0 var(--side-padding);
+    min-height: 100vh;
+    
+    .right {
+        border-left: 1px solid var(--black);
+        padding: 40px;
+
+        h3 {
+            margin: 0 0 40px 0;
+        }
+    }
+
+}
+
+/* Coupon Toggle */
+.woocommerce-form-coupon-toggle {
+    padding: 10px var(--side-padding) 20px var(--side-padding);
+    font-family: var(--sans);
+}
+
+.woocommerce-additional-fields {
+    display: none;
+}
+
+
+/* Checkout Menu */
+.checkout-menu {
+    border-top: 1px solid var(--grey);
+    padding: 20px 0;
+    margin: 40px 0 0 0;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 14px;
+
+        a {
+            font-family: var(--sans);
+            text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .desktop { display: none; }
+    .mobile { display: block; }
+
+    .checkout-page {
+        grid-template-columns: 1fr;
+        padding: 0;
+
+        .right {
+            display: none;
+        }
+    }
+
+    #order_review_heading {
+        display: none;
+    }
+
+    .checkout-menu {
+        padding: 20px 0;
+        margin: 40px var(--side-padding) 0 var(--side-padding);
+    }
+
+}

@@ -1,0 +1,42 @@
+.woocommerce-info,
+.woocommerce-message,
+.woocommerce-error li {
+    background: var(--grey-lite);
+    padding: 20px 30px;
+    border-radius: 5px;
+    //margin: 10px var(--side-padding);
+    font-family: var(--sans);
+    animation: fadeOut var(--transition) forwards;
+    animation-delay: 2s;
+
+    a {
+        margin-left: 20px;
+        text-decoration: underline;
+        transition: all var(--transition);
+    }
+
+    a:hover {
+        color: var(--orange);
+    }
+}
+
+:focus-visible {
+    outline: 0px !important;
+    border: 0;
+}
+
+.woocommerce-info {
+    animation: none;
+}
+
+.woocommerce-error {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@keyframes fadeOut {
+    0% { display: block; opacity: 1; }
+    75% { opacity: 0; }
+    100% { display: none; opacity: 0; }
+}

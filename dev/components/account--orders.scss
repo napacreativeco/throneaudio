@@ -1,0 +1,60 @@
+.orders-page {
+    
+    thead {
+        border-bottom: 1px solid #9f9f9f;
+        margin: 0 0 20px 0;
+    }
+
+    th {
+        text-align: left;
+        font-family: var(--mono);
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    td {
+        font-family: var(--sans);
+        font-size: 22px;
+    }
+
+    a {
+        transition: all var(--transition);
+    }
+
+    a:hover {
+        color: var(--orange);
+    }
+
+    a.order-number {
+        text-decoration: underline;
+    }
+
+    // Order Date 
+    .woocommerce-orders-table__header-order-date,
+    .woocommerce-orders-table__cell-order-date {
+        text-align: center;
+    }
+
+    // Order Total
+    .woocommerce-orders-table__header-order-total,
+    .woocommerce-orders-table__cell-order-total {
+        text-align: center;
+    }
+
+    // Order Status
+    .woocommerce-orders-table__header-order-status,
+    .woocommerce-orders-table__cell-order-status {
+        display: none;
+    }
+
+    // Actions
+    .woocommerce-orders-table__header-order-actions,
+    .woocommerce-orders-table__cell-order-actions {
+        text-align: right;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+}

@@ -1,0 +1,110 @@
+.single-product {
+    
+    .summary {
+        padding: 100px var(--side-padding);
+
+        .category {
+            border: 1px solid var(--grey);
+            border-radius: 50px;
+            padding: 4px 10px;
+            display: inline-block;
+            font-size: var(--text-xs);
+            margin: 0 0 8px 0;
+        }
+
+        h1 {
+            font-size: var(--text-xxxl);
+        }
+
+        .price {
+            margin: 10px 0;
+        }
+
+        button {
+            background: var(--grey);
+            outline: 0;
+            border: 0;
+            font-family: var(--sans);
+            text-align: left;
+            padding: 20px 200px 20px 20px;
+            font-size: var(--text-m);
+            display: inline-block;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: opacity var(--transition);
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .images {
+        .featured-image {
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .thumbnails {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .description {
+        padding: 40px var(--side-padding);
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        line-height: 1.6;
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+        
+        p {
+            font-family: var(--sans);
+            font-size: 26px;
+            line-height: 1.4;
+        }
+
+        .text-block {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            grid-gap: 40px;
+            align-items: flex-start;
+
+            h2 {
+                line-height: 1;
+            }
+
+            p {
+                font-family: var(--mono);
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .single-product {
+        .description {
+            width: calc(100% - calc(var(--side-padding)*2));
+
+            p {
+                font-family: var(--sans);
+            }
+
+            .text-block {
+                h2 {
+                    font-size: 24px;
+                }
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

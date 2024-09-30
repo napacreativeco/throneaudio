@@ -1,0 +1,26 @@
+.cart-empty-page {
+    padding: 0 var(--side-padding);
+
+    .cart-title {
+        margin: 40px 0 40px 0;
+    }
+
+    .return-to-shop {
+        margin: 40px 0 40px 0;
+        display: block;
+        
+        a {
+            font-family: var(--sans);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 14px 0;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+

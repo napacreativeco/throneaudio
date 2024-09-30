@@ -1,0 +1,62 @@
+.woocommerce-table--order-downloads {
+
+    thead {
+        border-bottom: 1px solid #9f9f9f;
+        margin: 0 0 20px 0;
+    }
+
+    th {
+        text-align: left;
+        font-family: var(--mono);
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    td {
+        font-family: var(--sans);
+    }
+    
+    td.download-product {
+        font-size: 22px;
+    }
+
+    th.download-expires,
+    td.download-expires {
+        display: none;
+    }
+
+    th.download-file,
+    td.download-file {
+        text-align: right;
+    }
+
+    td.download-file {
+        a {
+            padding: 6px 14px;
+            background: var(--orange);
+            border-radius: 5px;
+            display: inline-block;
+            margin: 10px 0 0 0;
+            text-decoration: none;
+            transition: all var(--transition);
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .woocommerce-table--order-downloads {
+
+        th.download-remaining,
+        td.download-remaining {
+            display: none;
+        }
+
+    }
+
+}

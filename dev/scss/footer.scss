@@ -1,0 +1,18 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px var(--side-padding);
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        a {
+            font-family: var(--sans);
+            font-size: var(--text-s);
+        }
+    }
+}

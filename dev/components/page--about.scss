@@ -1,0 +1,14 @@
+#about {
+    padding: 0 var(--side-padding);
+    text-align: center;
+
+    h2 {
+        margin: 60px 0 20px 0;
+    }
+
+    p {
+        font-family: var(--sans);
+        font-size: 24px;
+        line-height: 1.4;
+    }
+}

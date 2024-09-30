@@ -1,0 +1,27 @@
+.addresses-page {
+
+    section {
+        margin: 0 0 40px 0;
+    }
+
+    p.no-address {
+        font-size: 12px;
+        margin: 0 0 10px 0;
+    }
+
+    a.edit-address {
+        background: var(--grey-lite);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: var(--sans);
+        display: inline-block;
+        margin: 0 0 10px 0;
+        transition: all var(--transition);
+        text-transform: capitalize;
+    }
+
+    a.edit-address:hover {
+        opacity: 0.8;
+    }
+
+}

@@ -1,0 +1,84 @@
+.login-page {
+    padding: 80px var(--side-padding);
+    max-width: 550px;
+    margin: auto;
+
+    label {
+        display: none;
+    }
+
+    input, select {
+        padding: 13px 11px;
+        border: 1px solid var(--grey);
+        border-radius: 5px;
+        width: calc(100% - 22px);
+        font-size: var(--text-s);
+        font-family: var(--sans);
+        font-weight: 100;
+    }
+
+    input:focus-visible {
+        outline: 1px solid var(--orange);
+    }
+
+    button {
+        background: var(--black);
+        color: var(--white);
+        outline: 0;
+        border: 0;
+        border-radius: 5px;
+        //font-family: var(--sans);
+        text-align: center;
+        padding: 20px 40px;
+        //width: 100%;
+        font-size: var(--text-m);
+        display: inline-block;
+        margin: 30px 0 20px 0;
+        cursor: pointer;
+        transition: opacity var(--transition);
+        text-transform: capitalize;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    h2 {
+        margin: 0 0 20px 0;
+    }
+
+    .form-row:has(input) {
+        margin: 0 0 16px 0;
+    }
+
+    .form-row.remember-me {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        white-space: nowrap;
+        font-family: var(--sans);
+        margin: 24px 0 16px 0;
+    }
+
+    input[type="checkbox"] {
+        width: auto;
+        margin: 0 0 0 10px;
+    }
+
+    .lost_password {
+        font-family: var(--sans);
+        color: var(--grey);
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .login-page {
+        max-width: 100%;
+        
+        form {
+            
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.fourohfour {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    padding: 80px 0 0 0;
+
+    a {
+        background: var(--black);
+        color: var(--white);
+        outline: 0;
+        border: 0;
+        border-radius: 5px;
+        //font-family: var(--sans);
+        text-align: center;
+        padding: 20px 40px;
+        //width: 100%;
+        font-size: var(--text-s);
+        font-family: var(--sans);
+        display: inline-block;
+        margin: 30px 0 20px 0;
+        cursor: pointer;
+        transition: opacity var(--transition);
+        text-transform: capitalize;
+    }
+
+    a:hover {
+        opacity: 0.8;
+    }
+}

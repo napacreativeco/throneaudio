@@ -1,0 +1,178 @@
+.account-page {
+    line-height: 1.8;
+    
+    .header-right path {
+        fill: var(--orange);
+    }
+
+    .woocommerce-message {
+        font-family: var(--sans);
+        margin: 0 0 20px 0; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .account-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--sans);
+        padding: 20px var(--side-padding) 0 var(--side-padding);
+
+        a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+    }
+
+    .dashboard-title {
+        margin: 0 0 40px 0;
+    
+        h2 {
+            line-height: 1;
+
+            span {
+                font-family: var(--mono);
+                font-size: 14px;
+            }
+        }
+    }
+
+    .account-container {
+        display: grid;
+        grid-template-columns: 4fr 8fr;
+        padding: 40px var(--side-padding);
+    }
+
+    // Nav
+    .left {
+
+        ul a {
+            transition: all var(--transition);
+        }
+        
+        ul a:hover {
+            color: var(--orange);
+        }
+
+        h3 {
+            margin: 0 0 40px 0;
+            line-height: 1;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-family: var(--sans);
+            font-size: 22px;
+            line-height: 1.2;
+        }
+
+
+        /* Logout */
+        .woocommerce-MyAccount-navigation-link--customer-logout a {
+            padding: 14px 30px;
+            border-radius: 5px;
+            background: var(--black);
+            color: var(--white);
+            margin-top: 12px;
+            display: inline-block;
+        }
+        .woocommerce-MyAccount-navigation-link--customer-logout a:hover {
+            color: var(--white);
+            opacity: 0.8;
+        }
+    }
+
+    .is-active a {
+        color: var(--orange);
+        text-decoration: underline;
+    }
+
+    .left.mobile { display: none; }
+
+}
+
+@media screen and (max-width: 767px) {
+    
+    .account-page {
+
+        .left.mobile { display: block; }
+        .left.desktop { display: none; }
+
+        // Global
+        h4 {
+            font-size: 26px;
+        }
+
+        .dashboard-title {
+            h2 {
+                span {
+                    display: block;
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        .left {
+
+            h3 {
+                margin: 0 0 0px 0;
+                line-height: 1;
+            }
+
+            details {
+                border-radius: 5px;
+                overflow: hidden;
+                border: 1px solid var(--grey);
+            }
+
+            summary {
+                padding: 20px;
+                border: 0;
+                line-height: 1;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                gap: 12px;
+
+                h4 {
+                    font-size: 26px;
+                }
+
+                svg {
+                    width: 18px;
+                    margin-left: 8px;
+                }
+            }
+
+            .details-body {
+                padding: 20px;
+                border-top: 1px solid var(--grey);
+            }
+            
+
+        }
+
+        .account-container {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+}
+
+
+
+
