@@ -189,6 +189,13 @@ add_action('rest_api_init', function () {
 function get_order_serial_number($data) {
     $order_id = $data['id'];
     $order = wc_get_order($order_id);
+    $items = $order->get_items();
+
+    foreach ( $items as $item ) {
+        $product_name = $item->get_name();
+        $product_id = $item->get_product_id();
+        $product_variation_id = $item->get_variation_id();
+    }
     
     if (!$order) {
         return new WP_Error('no_order', 'Invalid order ID', array('status' => 404));
@@ -199,7 +206,7 @@ function get_order_serial_number($data) {
     
     return rest_ensure_response(array(
         'order_id' => $order_id,
-        'order_customer' => 'customer name',
         'serial_number' => $serial_number,
+        'product_id' =>  $product_id
     ));
 }
