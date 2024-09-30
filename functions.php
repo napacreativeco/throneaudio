@@ -179,34 +179,57 @@ function override_default_shipping_address_fields( $fields ) {
  /*
     ORDER AUTH
  */
+// add_action('rest_api_init', function () {
+//     register_rest_route('vaporreverb/v1', '/order/(?P<id>\d+)', array(
+//         'methods' => 'GET',
+//         'callback' => 'get_order_serial_number',
+//     ));
+// });
+
+// function get_order_serial_number($data) {
+//     $order_id = $data['id'];
+//     $order = wc_get_order($order_id);
+//     $items = $order->get_items();
+
+//     foreach ( $items as $item ) {
+//         $product_name = $item->get_name();
+//         $product_id = $item->get_product_id();
+//         $product_variation_id = $item->get_variation_id();
+//     }
+    
+//     if (!$order) {
+//         return new WP_Error('no_order', 'Invalid order ID', array('status' => 404));
+//     }
+
+//     // Assuming the serial number is stored in order meta
+//     $serial_number = get_post_meta($order_id, '_serial_number', true);
+    
+//     return rest_ensure_response(array(
+//         'order_id' => $order_id,
+//         'serial_number' => $serial_number,
+//         'product_id' =>  $product_id
+//     ));
+// }
+
+
 add_action('rest_api_init', function () {
-    register_rest_route('vaporreverb/v1', '/order/(?P<id>\d+)', array(
+    register_rest_route('dlm/v1/licenses/activate/', '', array(
         'methods' => 'GET',
         'callback' => 'get_order_serial_number',
     ));
 });
 
 function get_order_serial_number($data) {
-    $order_id = $data['id'];
-    $order = wc_get_order($order_id);
-    $items = $order->get_items();
-
-    foreach ( $items as $item ) {
-        $product_name = $item->get_name();
-        $product_id = $item->get_product_id();
-        $product_variation_id = $item->get_variation_id();
-    }
+    $order = $data['success'];
     
-    if (!$order) {
+    if ($order == false) {
         return new WP_Error('no_order', 'Invalid order ID', array('status' => 404));
     }
 
     // Assuming the serial number is stored in order meta
-    $serial_number = get_post_meta($order_id, '_serial_number', true);
+    //$serial_number = get_post_meta($order_id, '_serial_number', true);
     
     return rest_ensure_response(array(
-        'order_id' => $order_id,
-        'serial_number' => $serial_number,
-        'product_id' =>  $product_id
+        'success_state' => $order
     ));
 }
