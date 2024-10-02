@@ -35,9 +35,9 @@ if ( have_posts() ) :
 			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/compiled/page--homepage.css">
 			<?php
 			get_template_part('template-parts/slideshow');
-			get_template_part('template-parts/marquee');
 			the_content();
 			get_template_part('template-parts/home-products');
+			get_template_part('template-parts/marquee');
 			
 		}
 		elseif ( is_page('categories') )

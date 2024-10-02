@@ -1,3 +1,26 @@
+header {
+    background: var(--grey);
+    color: var(--black);
+
+    path {
+        fill: var(--black) !important;
+    }
+
+    svg:hover {
+        path {
+            fill: var(--orange) !important;
+        }
+    }
+}
+
+#header-mobile {
+    div.hamburger {
+        span {
+            background: var(--black);
+        }
+    }
+}
+
 ul.products {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -41,29 +64,29 @@ ul.products {
                 }
 
                 .category {
-                    border: 1px solid var(--black);
+                    border: 1px solid var(--black-lite);
                     border-radius: 50px;
                     padding: 4px 10px;
                     display: inline-block;
                     font-size: var(--text-xs);
+                    font-family: var(--sans);
                     margin: 0 0 8px 0;
+                    color: var(--black-lite);
                 }
 
                 h2 {
                     margin: 0 0 10px 0;
                     font-size: var(--text-l);
                     transition: color var(--transition);
+                    color: var(--black);
                 }
 
-                h2:hover {
-                    color: var(--orange);
-                }
-
-                p {
+                h3 {
                     margin: 0 0 10px 0;
                     font-size: var(--text-l);
                     font-family: var(--sans);
                     opacity: 0.6;
+                    color: var(--black-lite);
                 }
             }
 
@@ -77,6 +100,7 @@ ul.products {
 
                 a {
                     background: var(--orange);
+                    color: var(--black);
                     padding: 20px 40px;
                     border-radius: 20px 20px 0 0;
                     border: 0;
@@ -108,11 +132,15 @@ ul.products {
 
                 .left {
 
+                    .category {
+                        padding: 2px 12px;
+                    }
+
                     h2 {
                         font-size: 18px;
                     }
 
-                    p {
+                    h3 {
                         font-size: 18px;
                     }
                 }

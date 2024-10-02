@@ -28,7 +28,6 @@
                         </div>
 
                         <div class="text-content">
-                            <h2><?php the_title(); ?></h2>
                             <p><?php the_content(); ?></p>
                         </div>
                     <?php
@@ -39,7 +38,6 @@
                     if ($image_style == 'featured') { ?>
                         <div class="wrap">
                             <div class="text-content">
-                                <h2><?php the_title(); ?></h2>
                                 <p><?php the_content(); ?></p>
                             </div>
                             <div class="featured-image">

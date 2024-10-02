@@ -42,7 +42,7 @@ get_header('shop');
                             <span class="category"><?php echo wc_get_product_category_list($loop->post->ID); ?></span>
                             <div class="info">
                                 <h2 class="title"><?php the_title(); ?></h2>
-                                <p class="description"><?php the_excerpt(); ?></p>
+                                <h3 class="description"><?php the_excerpt(); ?></h3>
                             </div>
                         </div>
 

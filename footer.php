@@ -22,14 +22,21 @@
 	});
 </script>
 <footer>
-    <?php
-    wp_nav_menu(
-        array(
-            'theme_location' => 'footermenu',
-            'menu_id'        => 'footer-menu',
-        )
-    );
-    ?>
+
+	<div class="attribution">
+		<p>Copyright &copy; Throne Audio <?php echo date('Y'); ?></p>
+		<p>Website by <a href="https://throne.work">Throne Studio</a></p>
+	</div>
+
+	<?php
+	wp_nav_menu(
+		array(
+			'theme_location' => 'footermenu',
+			'menu_id'        => 'footer-menu',
+		)
+	);
+	?>
+
 </footer>
 
 <script>

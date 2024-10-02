@@ -24,6 +24,8 @@ function woocommerce_support() {
    add_theme_support( 'woocommerce' );
 }    
 
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
 
 /*======================================================
  * Styles
@@ -177,7 +179,7 @@ function override_default_shipping_address_fields( $fields ) {
 
 
  /*
-    ORDER AUTH
+    ORDER AUTH via ORDER NUMBER
  */
 // add_action('rest_api_init', function () {
 //     register_rest_route('vaporreverb/v1', '/order/(?P<id>\d+)', array(
@@ -212,6 +214,9 @@ function override_default_shipping_address_fields( $fields ) {
 // }
 
 
+ /*
+    ACTIVATE LICENSE via DIGITAL LICENSE MANANGER
+ */
 add_action('rest_api_init', function () {
     register_rest_route('dlm/v1/licenses/activate/', '', array(
         'methods' => 'GET',
@@ -220,16 +225,35 @@ add_action('rest_api_init', function () {
 });
 
 function get_order_serial_number($data) {
-    $order = $data['success'];
+    $authorized = $data['success'];
     
-    if ($order == false) {
-        return new WP_Error('no_order', 'Invalid order ID', array('status' => 404));
+    if ($authorized == false) {
+        return new WP_Error('invalid_license', 'Invalid License Number', array('status' => 404));
     }
-
-    // Assuming the serial number is stored in order meta
-    //$serial_number = get_post_meta($order_id, '_serial_number', true);
     
     return rest_ensure_response(array(
-        'success_state' => $order
+        'success_state' => $authorized
+    ));
+}
+
+ /*
+    VALIDATE LICENSE via DIGITAL LICENSE MANANGER
+ */
+add_action('rest_api_init', function () {
+    register_rest_route('dlm/v1/licenses/validate/', '', array(
+        'methods' => 'GET',
+        'callback' => 'get_activation_token',
+    ));
+});
+
+function get_activation_token($data) {
+    $authorized = $data['success'];
+    
+    if ($authorized == false) {
+        return new WP_Error('invalid_token', 'Invalid Activation Token', array('status' => 404));
+    }
+    
+    return rest_ensure_response(array(
+        'success_state' => $authorized
     ));
 }

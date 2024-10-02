@@ -5,18 +5,6 @@
     padding: 4px 0px;
     border-bottom: 1px solid var(--grey);
     z-index: 10;
-    //position: relative;
-
-    div:nth-child(2) {
-        svg {
-            path {
-                fill: var(--black);
-                transition: all var(--transition);
-            }
-        }
-
-    }
-
 
     div.hamburger {
         position: relative;
@@ -30,7 +18,7 @@
         span {
             width: 30px;
             height: 2px;
-            background: var(--black);
+            background: var(--white);
             transition: all var(--transition);
         }
     }
@@ -55,12 +43,20 @@
         padding-left: 10px;
     }
 
+    // Logo
     div:nth-child(2) {
-        text-align: center;
+        display: flex;
+        justify-content: center;
 
         svg {
             width: 40px;
+
+            path {
+                fill: var(--white);
+                transition: all var(--transition);
+            }
         }
+
     }
 
     div:nth-child(3) {
@@ -73,10 +69,19 @@
     .cart-count {
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 3px;
         background: var(--orange);
+        color: var(--black);
         border-radius: 14px 0 0 14px;
         padding: 14px 30px 14px 20px;
+        font-size: 16px;
+        line-height: 1;
+
+        svg {
+            width: 16px;
+            height: 100%;
+        }
 
         path {
             stroke-width: 2px;

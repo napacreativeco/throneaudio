@@ -54,7 +54,7 @@
     }
 
     .description {
-        padding: 40px var(--side-padding);
+        padding: 80px var(--side-padding) 40px var(--side-padding);
         display: flex;
         flex-direction: column;
         gap: 60px;
@@ -71,7 +71,7 @@
 
         .text-block {
             display: grid;
-            grid-template-columns: 2fr 10fr;
+            grid-template-columns: 3fr 10fr;
             grid-gap: 40px;
             align-items: flex-start;
 
@@ -90,14 +90,23 @@
 
 @media screen and (max-width: 767px) {
     .single-product {
+
+        .summary {
+            padding: 50px var(--side-padding);
+        }
+
         .description {
             width: calc(100% - calc(var(--side-padding)*2));
+            padding: 40px var(--side-padding) 60px var(--side-padding);
 
             p {
                 font-family: var(--sans);
             }
 
             .text-block {
+                grid-template-columns: 1fr;
+                grid-gap: 14px;
+
                 h2 {
                     font-size: 24px;
                 }

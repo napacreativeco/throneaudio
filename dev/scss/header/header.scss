@@ -26,6 +26,7 @@
 
         a {
             font-family: var(--sans);
+            font-size: 16px;
             cursor: pointer;
             transition: all var(--transition);
         }
@@ -99,6 +100,8 @@
 
     .cart-count {
         background: var(--orange);
+        color: var(--black);
+        font-size: 16px;
         border-radius: 14px 0 0 14px;
         padding: 14px 40px 14px 20px;
         margin: 0px calc(var(--side-padding) * -1) 0 0;
