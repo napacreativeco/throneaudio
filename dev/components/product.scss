@@ -10,6 +10,7 @@
             display: inline-block;
             font-size: var(--text-xs);
             margin: 0 0 8px 0;
+            color: var(--orange);
         }
 
         h1 {
@@ -18,6 +19,10 @@
 
         .price {
             margin: 10px 0;
+        }
+
+        .woocommerce-product-details__short-description {
+            color: var(--grey);
         }
 
         button {

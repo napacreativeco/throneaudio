@@ -81,7 +81,7 @@
                     width: 100%;
                     display: block;
                     height: auto;
-                    border-radius: 0 20px 0 20px !important;
+                    border-radius: 0 6px 0 6px !important;
                     transition: all var(--transition);
                 }
             }
@@ -95,6 +95,7 @@
             font-size: 24px;
             font-family: var(--sans);
             transition: all var(--transition);
+            line-height: 1;
         }
 
         .title:hover {
@@ -102,7 +103,7 @@
         }
     
         .quantity {
-            padding: 10px 0;
+            padding: 4px 0 0 0;
             font-size: var(--text-xs);
         }
     

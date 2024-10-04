@@ -10,18 +10,19 @@
     }
 
     a.edit-address {
-        background: var(--grey-lite);
-        padding: 10px 20px;
-        border-radius: 5px;
         font-family: var(--sans);
+        font-size: var(--text-s);
         display: inline-block;
         margin: 0 0 10px 0;
         transition: all var(--transition);
         text-transform: capitalize;
+        border-bottom: 2px solid var(--white);
+        color: var(--white);
     }
 
     a.edit-address:hover {
-        opacity: 0.8;
+        border-bottom: 2px solid var(--orange);
+        color: var(--orange);
     }
 
 }

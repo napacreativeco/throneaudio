@@ -42,6 +42,7 @@ body {
     color: var(--white);
     font-size: 12px;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -76,10 +77,60 @@ summary::-webkit-details-marker {
     display: none;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* Forms */
+label {
+    display: none;
+}
+
+input, select {
+    padding: 13px 11px;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    font-size: var(--text-s);
+    font-family: var(--sans);
+    font-weight: 100;
+}
+
+input:focus-visible {
+    outline: 1px solid var(--orange);
+}
+
+button,
+a.button {
+    background: var(--orange);
+    color: var(--black);
+    outline: 0;
+    border: 0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 16px 32px;
+    font-size: var(--text-s);
+    display: inline-block;
+    margin: 30px 0 20px 0;
+    cursor: pointer;
+    transition: opacity var(--transition);
+    text-transform: capitalize;
+}
+
+button:hover,
+a.button:hover {
+    opacity: 0.8;
+}
+
+
 /* Header */
 @import './header/header.scss';
 @import './header/header-mobile.scss';
 @import './header/mobile-menu.scss';
+@import './header/header-docs.scss';
+@import './header/hamburger.scss';
 
 @import './notices.scss';
 @import './footer.scss';

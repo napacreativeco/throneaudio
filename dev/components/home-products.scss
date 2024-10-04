@@ -14,6 +14,9 @@ ul.products {
         aspect-ratio: 16/9;
         display: block;
         cursor: pointer;
+        border-top-right-radius: 14px;
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
     }
 
     a {
@@ -40,6 +43,7 @@ ul.products {
             p {
                 font-size: var(--text-xs);
                 line-height: 1.4;
+                color: var(--grey);
             }
         }
 
@@ -54,6 +58,7 @@ ul.products {
             }
 
             button.add-to-cart {
+                margin: 0;
                 background: var(--orange);
                 border-radius: 0 0 14px 14px;
                 padding: 12px 20px 12px 20px;

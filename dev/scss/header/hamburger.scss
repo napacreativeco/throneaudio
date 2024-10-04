@@ -1,0 +1,32 @@
+div.hamburger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: 30px;
+    z-index: 999;
+
+    span {
+        width: 30px;
+        height: 2px;
+        background: var(--white);
+        transition: all var(--transition);
+    }
+}
+
+div.hamburger[data-open="open"] {
+
+    span.top {
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0px;
+    }
+    span.middle { display: none; }
+
+    span.bottom {
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0px;
+    }
+}

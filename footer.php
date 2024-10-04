@@ -2,6 +2,8 @@
 
 <?php get_template_part( 'template-parts/js--details' ); ?>
 
+<script src="<?php echo get_template_directory_uri(); ?>/compiled/throne.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
 	const swiper = new Swiper('.hero-swiper', {
@@ -21,6 +23,9 @@
 		}
 	});
 </script>
+
+</div> <!-- /site-container -->
+
 <footer>
 
 	<div class="attribution">

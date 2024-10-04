@@ -32,6 +32,12 @@
         a:hover {
             text-decoration: underline;
         }
+
+        svg {
+            path {
+                stroke: var(--white);
+            }
+        }
         
     }
 
@@ -65,6 +71,11 @@
             color: var(--orange);
         }
 
+        h4 {
+            margin: 0 0 30px 0;
+            color: var(--grey);
+        }
+
         h3 {
             margin: 0 0 40px 0;
             line-height: 1;
@@ -84,13 +95,13 @@
         .woocommerce-MyAccount-navigation-link--customer-logout a {
             padding: 14px 30px;
             border-radius: 5px;
-            background: var(--black);
-            color: var(--white);
+            background: var(--white);
+            color: var(--black);
             margin-top: 12px;
             display: inline-block;
+            font-size: var(--text-s);
         }
         .woocommerce-MyAccount-navigation-link--customer-logout a:hover {
-            color: var(--white);
             opacity: 0.8;
         }
     }
@@ -101,6 +112,11 @@
     }
 
     .left.mobile { display: none; }
+
+    td.download-remaining {
+        font-size: 26px;
+        line-height: 1;
+    }
 
 }
 
@@ -136,6 +152,7 @@
                 border-radius: 5px;
                 overflow: hidden;
                 border: 1px solid var(--grey);
+                margin: 0 0 30px 0;
             }
 
             summary {
@@ -149,11 +166,17 @@
 
                 h4 {
                     font-size: 26px;
+                    margin: 0;
+                    color: var(--white);
                 }
 
                 svg {
                     width: 18px;
                     margin-left: 8px;
+
+                    path {
+                        stroke: var(--white);
+                    }
                 }
             }
 

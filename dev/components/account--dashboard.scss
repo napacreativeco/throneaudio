@@ -17,16 +17,17 @@
         display: block;
 
         a {
-            background: var(--grey-lite);
-            padding: 10px 20px;
-            border-radius: 5px;
+            color: var(--white);
+            font-size: var(--text-s);
             font-family: var(--sans);
             display: inline-block;
             transition: all var(--transition);
+            border-bottom: 2px solid var(--white);
         }
 
         a:hover {
-            opacity: 0.8;
+            color: var(--orange);
+            border-bottom: 2px solid var(--orange);
         }
     }
 }

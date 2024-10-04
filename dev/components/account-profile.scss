@@ -16,6 +16,11 @@
         font-size: var(--text-s);
         font-family: var(--sans);
         font-weight: 100;
+        background: var(--grey);
+    }
+
+    input::placeholder {
+        color: var(--black-lite);
     }
 
     input:focus-visible {
@@ -32,9 +37,10 @@
 
     button[type="submit"] {
         padding: 14px 30px;
+        border: 0;
         border-radius: 5px;
-        background: var(--black);
-        color: var(--white);
+        background: var(--orange);
+        color: var(--black);
         margin-top: 12px;
         display: inline-block;
         font-family: var(--sans);

@@ -71,7 +71,7 @@ ul.products {
                     font-size: var(--text-xs);
                     font-family: var(--sans);
                     margin: 0 0 8px 0;
-                    color: var(--black-lite);
+                    color: var(--orange);
                 }
 
                 h2 {
@@ -96,7 +96,8 @@ ul.products {
                 align-items: center;
                 justify-content: flex-end;
                 gap: 20px;
-                padding: 0 var(--side-padding) 0 0 ;
+                padding: 0 var(--side-padding) 0 0;
+                color: var(--black);
 
                 a {
                     background: var(--orange);
